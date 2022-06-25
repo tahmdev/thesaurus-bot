@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Brainshop } from "./Brainshop";
 import { ChatInput } from "./ChatInput";
 import { MessageHistory } from "./Messagehistory";
 
@@ -13,6 +14,7 @@ export const Chatwindow: React.FC<Props> = () => {
     <div className="chatwindow-wrapper">
       <MessageHistory messages={messages} />
       <ChatInput setMessages={setMessages} />
+      <Brainshop messages={messages} setMessages={setMessages} />
     </div>
   );
 };
