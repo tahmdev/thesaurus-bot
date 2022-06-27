@@ -36,7 +36,10 @@ export const AutoResizingTextarea: React.FC<Props> = ({
     }
     handleResize();
   }, []);
-  return (
-    <textarea ref={textareaRef} onInput={handleResize} {...props}></textarea>
-  );
+
+  useEffect(() => {
+    handleResize();
+  }, [textareaRef.current?.value]);
+
+  return <textarea ref={textareaRef} {...props}></textarea>;
 };
