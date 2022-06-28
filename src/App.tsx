@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Chatwindow } from "./components/Chatwindow";
 
@@ -9,6 +8,7 @@ export const UserContext = React.createContext(uid);
 function App() {
   return (
     <div className="App">
+      <h1> Thesaurus Bot </h1>
       <UserContext.Provider value={uid}>
         <Chatwindow />
       </UserContext.Provider>

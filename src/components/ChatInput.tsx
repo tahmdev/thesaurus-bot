@@ -5,7 +5,6 @@ import React, {
   useRef,
   ChangeEventHandler,
   KeyboardEventHandler,
-  FormEventHandler,
 } from "react";
 import { AutoResizingTextarea } from "./AutoResizingTextarea";
 import { Message } from "./Chatwindow";
@@ -44,15 +43,14 @@ export const ChatInput: React.FC<Props> = ({ setMessages }) => {
     <div className="chat-input-wrapper">
       <form onSubmit={handleSubmit} ref={formRef}>
         <AutoResizingTextarea
-          minRows={1}
-          maxRows={6}
-          className="aaaw"
+          minRows={2}
+          maxRows={5}
           placeholder="Enter a message"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           value={currentInput}
         />
-        <button>send</button>
+        <button>Send</button>
       </form>
     </div>
   );
