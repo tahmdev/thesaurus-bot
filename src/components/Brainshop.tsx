@@ -11,7 +11,9 @@ export const Brainshop: React.FC<Props> = ({ messages, setMessages }) => {
   useEffect(() => {
     if (messages?.at(-1)?.author === "user") {
       fetch(
-        `http://localhost:9000/brainshop/${uid}/${messages?.at(-1)?.content}`,
+        `https://saurus-bot.herokuapp.com/brainshop/${uid}/${
+          messages?.at(-1)?.content
+        }`,
         {
           method: "GET",
         }
