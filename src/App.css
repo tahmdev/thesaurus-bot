@@ -17,12 +17,62 @@ body,
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  width: 100%;
   height: 100%;
   background-color: var(--bg-200);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.05rem;
   line-height: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-body {
-  height: fit-content;
+button:hover {
+  cursor: pointer;
+}
+h1 {
+  color: rgb(236, 143, 110);
+}
+.chatwindow-wrapper {
+  height: 80%;
+  width: min(90%, 900px);
+  background-color: var(--bg-400);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.message-history-wrapper {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.msg {
+  padding: 0.5rem;
+  margin: 0.5rem 0.8rem;
+  width: fit-content;
+  max-width: 70%;
+  border-radius: 6px;
+}
+.user-msg {
+  align-self: flex-end;
+  background-color: coral;
+}
+.bot-msg {
+  background-color: var(--bg-100);
+}
+.chat-input-wrapper {
+  margin-top: 1rem;
+}
+.chat-input-wrapper > form {
+  display: flex;
+}
+.chat-input-wrapper textarea {
+  flex: 1 1 auto;
+  margin-right: 1rem;
+  resize: none;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.chat-input-wrapper button {
+  padding: 0 1rem;
 }
